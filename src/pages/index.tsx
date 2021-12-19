@@ -1,7 +1,7 @@
 // import styles from './index.less';
 // import React, { Component } from 'react';
 // import ReactToPrint from 'react-to-print';
-// import Barcode from "./components/Barcode/index";
+import Barcode from "./components/Barcode/index";
 
 // export default function IndexPage() {
 //   const componentRef = React.useRef(null);
@@ -96,7 +96,11 @@ export default function FunctionalComponentWithHook() {
       </button>
       {/* <div ref={componentRef} >1111</div> */}
       <div style={{'display':'none'}} >
-           <div ref={componentRef}>1111</div>
+           <div ref={componentRef}>
+              <div style={{'position':'absolute',top:20,right:30}} >
+                 <Barcode value="12345678" />
+              </div>
+           </div>
       </div>
     </div>
   );
